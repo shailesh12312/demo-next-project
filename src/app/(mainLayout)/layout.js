@@ -1,5 +1,5 @@
+import Header from "@/components/Layout/Header";
 import Sidebar from "@/components/Layout/Sidebar";
-import {Box, Stack} from "@mui/material";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,11 +8,12 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <Stack sx={{flexDirection: "row"}}>
+    <div className="main-layout">
       <Sidebar/>
-      <Box sx={{width: 'calc(100% - 250px)',p:2}}>
+      <div className="children">
+        <Header/>
         {children}
-      </Box>
-    </Stack>
+      </div>
+    </div>
   );
 }

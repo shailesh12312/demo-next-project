@@ -1,3 +1,4 @@
+'use client'
 import {Stack, styled} from "@mui/material";
 import MuiCard from '@mui/material/Card';
 
@@ -8,6 +9,7 @@ export const Card = styled(MuiCard)(({ theme }) => ({
   width: '100%',
   padding: theme.spacing(4),
   gap: theme.spacing(2),
+  borderRadius:'12px',
   margin: 'auto',
   [theme.breakpoints.up('sm')]: {
     maxWidth: '450px',
